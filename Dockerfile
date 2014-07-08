@@ -6,7 +6,7 @@ MAINTAINER Hans Donner <hans.donner@pobox.com>
 # install required packages
 # - for tornado: gcc build-essential python-dev
 #
-RUN apt-get install -y \
+RUN apt-get clean all; apt-get  update; apt-get install -y \
        git python python-pip \
        gcc build-essential python-dev ;\
     pip install tornado ;\
